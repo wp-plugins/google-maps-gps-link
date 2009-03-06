@@ -4,7 +4,7 @@ Donate link: n/a
 Tags: gps, maps, google
 Requires at least: n/a
 Tested up to: 2.7.1
-Stable tag: trunk
+Stable tag: 1.0
 
 Converts a properly formatted string with GPS coordinates in a post to a Google Maps link.
 
