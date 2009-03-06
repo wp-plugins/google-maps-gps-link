@@ -48,11 +48,5 @@ And the plugin will convert that to the following markup when WordPress renders 
 
 I can't really help you with that. If you saw my code, you'd understand just how true that is. Feel free to build upon my paltry offering to the FOSS gods, or you might take a look at WP Geo.
 
-
 == Screenshots ==
-
-
-== Arbitrary section ==
-
-
-== A brief Markdown Example ==
+N/A.
