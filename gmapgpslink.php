@@ -3,7 +3,7 @@
 Plugin Name: Google Maps GPS Link
 Plugin URI: http://wordpress.org/extend/plugins/google-maps-gps-link/
 Description: Given a string with the format: :gps:[Link text]::[V Coordinate]::[H Coordinate], this plugin will do a simple string replacement with a Google Maps URL to the given coordinates.
-Version: 1.0
+Version: 1.1
 Author: Jeff Yen
 Author URI: http://jeffyen.com
 */
@@ -29,10 +29,18 @@ add_filter('the_content', 'gmapgpslink');
 
 function gmapgpslink($content)
   {
+  $searchBit="::";
   $contentArray = explode(':gps:', $content);
-  $gpsArray = explode('::' , $contentArray[1]);
-  $gpslink = "<a href='http://maps.google.com/maps?f=q&source=s_q&hl=en&z=14&geocode=&q=" . $gpsArray[1] . ",+" . $gpsArray[2] . "' target='_blank'>" . $gpsArray[0] . "</a>";
-  $contentArray[1] = $gpslink;
+  for ( $arrCounter=0; $arrCounter < sizeof($contentArray); $arrCounter++ )
+    {
+    if ( strpos( $contentArray[$arrCounter] , $searchBit ) != FALSE )
+      {
+      $gpsArray = explode($searchBit , $contentArray[$arrCounter]);
+      $gpslink = "<a href='http://maps.google.com/maps?f=q&source=s_q&hl=en&z=14&geocode=&q=" . $gpsArray[1] . ",+" . $gpsArray[2] . "' target='_blank'>" . $gpsArray[0] . "</a>";
+      $contentArray[$arrCounter] = $gpslink;
+      }
+    }
+  
   return implode($contentArray);
   }
 
