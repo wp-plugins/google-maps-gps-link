@@ -1,14 +1,14 @@
 <?php
 /*
 Plugin Name: Google Maps GPS Link
-Plugin URI: http://blog.jeffyen.com/2009/03/gmapgpslink/
+Plugin URI: http://wordpress.org/extend/plugins/google-maps-gps-link/
 Description: Given a string with the format: :gps:[Link text]::[V Coordinate]::[H Coordinate], this plugin will do a simple string replacement with a Google Maps URL to the given coordinates.
 Version: 1.0
 Author: Jeff Yen
 Author URI: http://jeffyen.com
 */
 
-/*  Copyright 2009  Jeff Yen  (email : j_yenner@hotmail.com)
+/*  Copyright 2009  Jeff Yen  (email : jeffyen@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
